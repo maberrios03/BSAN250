@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tidecraft fishing spot intelligence and forecast planning dashboard.">
+  <title>Tidecraft | Fish smarter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#top" aria-label="Tidecraft home">
+        <span class="brand-mark">✦</span>
+        <span>TIDECRAFT</span>
+      </a>
+      <div class="workspace-label">WORKSPACE <span>PRO</span></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-item active" href="#dashboard"><span class="nav-icon">⌂</span>Dashboard</a>
+        <a class="nav-item" href="#spots"><span class="nav-icon">⌖</span>My spots <b id="spot-count">4</b></a>
+        <a class="nav-item" href="#calendar"><span class="nav-icon">▦</span>Trip calendar</a>
+        <a class="nav-item" href="#reports"><span class="nav-icon">◒</span>Catch reports</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="nav-item" href="#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <div class="pro-card">
+          <span class="pro-spark">✦</span>
+          <strong>Unlock more water</strong>
+          <p>Get 16-day forecasts and unlimited spots.</p>
+          <button class="upgrade-button">Upgrade <span>↗</span></button>
+        </div>
+        <div class="user-row"><div class="avatar">MR</div><div><strong>Maya Rivera</strong><small>Explorer account</small></div><span class="more">···</span></div>
+      </div>
+    </aside>
+
+    <main id="top" class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">✦</span> TIDECRAFT</div>
+        <div class="breadcrumbs"><span>Workspace</span><i>/</i><strong>Dashboard</strong></div>
+        <div class="top-actions"><button class="icon-button" aria-label="Search">⌕</button><button class="icon-button" aria-label="Notifications">♧<em></em></button><div class="top-avatar">MR</div></div>
+      </header>
+
+      <div class="content-wrap" id="dashboard">
+        <section class="welcome-row">
+          <div><p class="eyebrow">TUESDAY, SEPTEMBER 02, 2026 <span class="live-dot"></span> LIVE CONDITIONS</p><h1>Good morning, Maya.</h1><p class="subheading">The water is calling. Here’s where it’s worth listening today.</p></div>
+          <button class="primary-button" id="add-spot"><span>＋</span> Add new spot</button>
+        </section>
+
+        <section class="hero-grid">
+          <article class="conditions-panel">
+            <div class="panel-heading"><div><span class="section-kicker">SELECTED SPOT</span><button class="spot-selector" id="spot-selector">Montauk Point <span>⌄</span></button></div><button class="star-button" id="save-spot" aria-label="Save spot">☆</button></div>
+            <div class="hero-condition"><div class="weather-icon">☼</div><div><div class="temperature">68<span>°F</span></div><div class="condition-name">Clear &amp; calm</div></div><div class="confidence"><span>●</span><strong>Very good</strong><small>fishing window</small></div></div>
+            <div class="metric-grid"><div class="metric"><span>WIND</span><strong>SW 8 <small>mph</small></strong><i>↗</i></div><div class="metric"><span>WATER</span><strong>67 <small>°F</small></strong><i>≈</i></div><div class="metric"><span>VISIBILITY</span><strong>2.4 <small>mi</small></strong><i>◌</i></div></div>
+            <div class="chart-wrap"><div class="chart-labels"><span>ACTIVITY SCORE</span><strong>92 / 100</strong></div><div class="chart"><div class="chart-line"></div><span class="chart-dot d1"></span><span class="chart-dot d2"></span><span class="chart-dot d3"></span><span class="chart-dot d4"></span><span class="chart-dot d5"></span><span class="now-line"></span></div><div class="chart-times"><span>6 AM</span><span>9 AM</span><span>12 PM</span><span>3 PM</span><span>6 PM</span></div></div>
+          </article>
+          <article class="tide-panel"><div class="panel-heading"><div><span class="section-kicker">TIDE OUTLOOK</span><h2>Today’s tides</h2></div><span class="date-chip">SEP 02</span></div><div class="tide-chart"><div class="tide-grid"></div><svg viewBox="0 0 500 130" preserveAspectRatio="none" aria-label="Tide curve"><path d="M0 99 C46 94 70 47 112 48 S174 110 222 103 S272 35 320 31 S378 74 406 82 S455 91 500 48" fill="none" stroke="#f2b84b" stroke-width="3" vector-effect="non-scaling-stroke"/><circle cx="112" cy="48" r="5" fill="#f2b84b"/><circle cx="320" cy="31" r="5" fill="#f2b84b"/></svg><div class="tide-time high-one">8:42 AM<strong>4.8 ft</strong></div><div class="tide-time high-two">3:16 PM<strong>0.6 ft</strong></div></div><div class="tide-events"><div><span class="tide-arrow up">↑</span><p>High tide <strong>8:42 AM</strong></p></div><div><span class="tide-arrow down">↓</span><p>Low tide <strong>3:16 PM</strong></p></div><div><span class="tide-arrow up">↑</span><p>High tide <strong>9:31 PM</strong></p></div></div><div class="best-window"><span>✦</span><p><strong>Prime window</strong><br><small>7:10 AM – 10:30 AM</small></p><b>Best time to go →</b></div></article>
+        </section>
+
+        <section class="section-block" id="spots"><div class="section-title"><div><span class="section-kicker">YOUR COLLECTION</span><h2>My fishing spots</h2></div><a href="#spots">View all <span>→</span></a></div><div class="spot-grid" id="spot-grid"><article class="spot-card selected"><div class="spot-image montauk"><span class="favorite">★</span><span class="spot-tag">ACTIVE NOW</span></div><div class="spot-info"><div><h3>Montauk Point</h3><p>Long Island, NY</p></div><span class="score">92</span></div><div class="spot-meta"><span>☼ 68°F</span><span>SW 8 mph</span><button class="open-spot">Open →</button></div></article><article class="spot-card"><div class="spot-image cape"><span class="favorite">☆</span></div><div class="spot-info"><div><h3>Cape May Jetty</h3><p>Cape May, NJ</p></div><span class="score medium">74</span></div><div class="spot-meta"><span>☁ 64°F</span><span>W 12 mph</span><button class="open-spot">Open →</button></div></article><article class="spot-card"><div class="spot-image inlet"><span class="favorite">★</span></div><div class="spot-info"><div><h3>Barnegat Inlet</h3><p>Ocean County, NJ</p></div><span class="score">86</span></div><div class="spot-meta"><span>☼ 71°F</span><span>SW 10 mph</span><button class="open-spot">Open →</button></div></article><article class="add-card" id="add-card"><span>＋</span><strong>Add a new spot</strong><small>Track conditions anywhere</small></article></div></section>
+
+        <section class="section-block forecast-section" id="calendar"><div class="section-title"><div><span class="section-kicker">PLAN AHEAD</span><h2>Forecast at Montauk Point</h2></div><div class="forecast-tabs" role="tablist"><button class="active" data-days="7">7 days</button><button data-days="14">14 days</button></div></div><div class="forecast-table" id="forecast-table"></div></section>
+      </div>
+      <footer><span>Data refreshed 2 min ago</span><span>Powered by NOAA · <a href="#settings">Preferences</a></span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
